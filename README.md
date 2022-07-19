@@ -64,7 +64,7 @@ CONFIG (SET) RTC
 
 	$ sudo echo [param val]
 		PARAM
-			1. t: 	устаановка нового времени. 
+			1. t: 	установка нового времени. 
 					val format:  "OURS.MINS.SECS DAY:MON:YEAR" 
 					пример: sudo echo t 12.07.01 18:07:2022 > /proc/rtc0
 			
