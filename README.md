@@ -49,7 +49,7 @@ READ RTC
 ----------------
 Для получения информации о состоянии RTCn используйте /proc/rtcnID (ID = 0 для одного устройства)
 	
-	$ sudo cat /dev/rtcn0
+	$ sudo cat /proc/rtcn0
 
 Также, можно воспользоваться вызовом ioctl через /dev/rtcnID
 	
@@ -66,15 +66,15 @@ CONFIG (SET) RTC
 		PARAM
 			1. t: 	устаановка нового времени. 
 					val format:  "OURS.MINS.SECS DAY:MON:YEAR" 
-					пример: sudo echo t 12.07.01 18:07:2022 > /proc/rtc1
+					пример: sudo echo t 12.07.01 18:07:2022 > /proc/rtc0
 			
 			2. f:	установка значения коэфициента.
 					val format: "UNSIGNED_INT"
-					пример: sudo echo f 100 > /proc/rtc1
+					пример: sudo echo f 100 > /proc/rtc0
 					
 			3. m:	установка значения режима работы RTCn.
 					val format: "0<val<4"
-					пример: sudo echo m 3 > /proc/rtc1
+					пример: sudo echo m 3 > /proc/rtc0
 
 Также, можно воспользоваться вызовом ioctl для установки времени через /dev/rtcnID
 	
